@@ -20,7 +20,8 @@ i18n.translations = {
         gallon: 'Gallons',
         squarefeet: 'Square Foot',
         acre: 'Acres',
-        home: 'Home'
+        home: 'Home',
+        typeOfProduct: 'Type of product'
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -40,7 +41,8 @@ i18n.translations = {
         gallon: 'Galões',
         squarefeet: 'Pé quadrado',
         acre: 'Acres',
-        home: 'Início'
+        home: 'Início',
+        typeOfProduct: 'Tipo de produto'
     },
     pt: { 
         quantity: 'Cantidade', 
@@ -60,7 +62,8 @@ i18n.translations = {
         gallon: 'Galón',
         squarefeet: 'Pie cuadrado',
         acre: 'Acres',
-        home: 'Comienzo'
+        home: 'Comienzo',
+        typeOfProduct: 'Tipo de producto'
     },
 }
 
