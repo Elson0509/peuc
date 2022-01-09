@@ -21,7 +21,9 @@ i18n.translations = {
         squarefeet: 'Square Foot',
         acre: 'Acres',
         home: 'Home',
-        typeOfProduct: 'Type of product'
+        typeOfProduct: 'Type of product',
+        product: 'Product',
+        price: 'Price',
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -42,7 +44,9 @@ i18n.translations = {
         squarefeet: 'Pé quadrado',
         acre: 'Acres',
         home: 'Início',
-        typeOfProduct: 'Tipo de produto'
+        typeOfProduct: 'Tipo de produto',
+        product: 'Produto',
+        price: 'Preço',
     },
     pt: { 
         quantity: 'Cantidade', 
@@ -63,7 +67,9 @@ i18n.translations = {
         squarefeet: 'Pie cuadrado',
         acre: 'Acres',
         home: 'Comienzo',
-        typeOfProduct: 'Tipo de producto'
+        typeOfProduct: 'Tipo de producto',
+        product: 'Producto',
+        price: 'Precio',
     },
 }
 

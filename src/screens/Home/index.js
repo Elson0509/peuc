@@ -18,7 +18,7 @@ const Home = (props) => {
                             <FontAwesome5
                                 style={styles.menuItemIcon}
                                 name={obj.item.icon}
-                                size={30}
+                                size={35}
                                 color='black'
                             />
                             <Text style={styles.menuItemText}>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         minHeight: 70,
         textAlign: 'center',
         backgroundColor: 'white',
-        paddingTop: 18
+        paddingTop: 15
     },
     menuItemText: {
         marginLeft: 30,
