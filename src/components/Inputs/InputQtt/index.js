@@ -5,13 +5,12 @@ import {
     Text,
     TextInput,
 } from 'react-native';
-import i18n from '../../../utils/textLanguages';
 
-const InputPrice = (props) => {
+const InputQtt = (props) => {
     return (
         <View style={styles.box}>
             <View>
-                <Text style={[styles.labelStyle, { color: 'black' }]}>{props.label}</Text>
+                <Text style={styles.labelStyle}>{props.label}</Text>
             </View>
             <View>
                 <TextInput
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         width: '100%',
     },
     txtInput: {
@@ -48,12 +47,12 @@ const styles = StyleSheet.create({
         height: 50,
     },
     labelStyle: {
-        fontSize: 20,
+        color: 'black',
+        fontSize: 15,
         fontWeight: 'bold',
         marginBottom: 5,
-        marginLeft: 5,
-        color: 'white',
+        
     }
 });
 
-export default InputPrice;
+export default InputQtt;

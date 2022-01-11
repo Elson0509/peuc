@@ -24,6 +24,8 @@ i18n.translations = {
         typeOfProduct: 'Type of product',
         product: 'Product',
         price: 'Price',
+        confirm: 'Confirm',
+        cancel: 'Cancel'
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -47,6 +49,8 @@ i18n.translations = {
         typeOfProduct: 'Tipo de produto',
         product: 'Produto',
         price: 'Preço',
+        confirm: 'Confirmar',
+        cancel: 'Cancelar'
     },
     pt: { 
         quantity: 'Cantidade', 
@@ -70,6 +74,8 @@ i18n.translations = {
         typeOfProduct: 'Tipo de producto',
         product: 'Producto',
         price: 'Precio',
+        confirm: 'Confirmar',
+        cancel: 'Cancelar'
     },
 }
 
