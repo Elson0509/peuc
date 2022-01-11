@@ -25,7 +25,9 @@ i18n.translations = {
         product: 'Product',
         price: 'Price',
         confirm: 'Confirm',
-        cancel: 'Cancel'
+        cancel: 'Cancel',
+        update: 'Update',
+        remove: 'Remove',
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -50,7 +52,9 @@ i18n.translations = {
         product: 'Produto',
         price: 'Preço',
         confirm: 'Confirmar',
-        cancel: 'Cancelar'
+        cancel: 'Cancelar',
+        update: 'Atualizar',
+        remove: 'Remover',
     },
     pt: { 
         quantity: 'Cantidade', 
@@ -75,7 +79,9 @@ i18n.translations = {
         product: 'Producto',
         price: 'Precio',
         confirm: 'Confirmar',
-        cancel: 'Cancelar'
+        cancel: 'Cancelar',
+        update: 'Actualizar',
+        remove: 'Eliminar',
     },
 }
 

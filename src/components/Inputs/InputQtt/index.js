@@ -14,7 +14,7 @@ const InputQtt = (props) => {
             </View>
             <View>
                 <TextInput
-                    style={[styles.txtInput]}
+                    style={[styles.txtInput, {borderColor: props.dangerColor || 'black'}]}
                     keyboardType={"decimal-pad"}
                     value={props.value.toString()}
                     onChangeText={props.changed}
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         paddingLeft: 10,
         backgroundColor: 'white',
-        borderColor: 'black',
+        //borderColor: 'black',
         color: 'black',
         borderRadius: 5,
         width: 150,

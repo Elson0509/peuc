@@ -17,27 +17,36 @@ const ActionButtons = (props) => {
                 <Text style={styles.textStyle}>{props.btn1Text}</Text>
             </Pressable>
             <Pressable
-                style={[styles.button, { backgroundColor: '#FF2323' }]}
+                style={[styles.button, { backgroundColor: '#FFB006' }]}
                 onPress={() => props.btn2Pressed()}
             >
                 <Text style={styles.textStyle}>{props.btn2Text}</Text>
             </Pressable>
+            {
+                !!props.btn3Text &&
+                <Pressable
+                    style={[styles.button, { backgroundColor: '#DC3545' }]}
+                    onPress={() => props.btn3Pressed()}
+                >
+                    <Text style={styles.textStyle}>{props.btn3Text}</Text>
+                </Pressable>
+            }
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     button: {
-      borderRadius: 20,
-      padding: 12,
-      elevation: 2,
-      marginLeft: 10
+        borderRadius: 12,
+        padding: 12,
+        elevation: 2,
+        marginLeft: 10
     },
     textStyle: {
-      color: "white",
-      fontWeight: "bold",
-      textAlign: "center"
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
     },
-  });
+});
 
 export default ActionButtons;
