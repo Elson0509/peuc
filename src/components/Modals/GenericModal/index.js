@@ -9,6 +9,7 @@ const GenericModal = (props) => {
             animationType='slide'
             transparent={true}
             visible={props.modal}
+            onShow={()=> props.onShow ? props.onShow() : null}
         >
             <View style={styles.modalView}>
                 { props.children }

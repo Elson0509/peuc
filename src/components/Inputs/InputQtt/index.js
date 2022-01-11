@@ -18,6 +18,8 @@ const InputQtt = (props) => {
                     keyboardType={"decimal-pad"}
                     value={props.value.toString()}
                     onChangeText={props.changed}
+                    ref={props.elementRef}
+                    onSubmitEditing={() => props.onSubmit ? props.onSubmit() : null}
                 />
             </View>
         </View>
@@ -40,7 +42,6 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         paddingLeft: 10,
         backgroundColor: 'white',
-        //borderColor: 'black',
         color: 'black',
         borderRadius: 5,
         width: 150,
