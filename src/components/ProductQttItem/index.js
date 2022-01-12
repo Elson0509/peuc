@@ -2,16 +2,24 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'
 import i18n from '../../utils/textLanguages';
+import {
+    BORDER_COLOR_ITEM_LIST, 
+    BORDER_COLOR_ITEM_LIST_EXPENSIVE, 
+    BORDER_COLOR_ITEM_LIST_CHEAP,
+    BACKGROUND_COLOR_ITEM_LIST_EXPENSIVE,
+    BACKGROUND_COLOR_ITEM_LIST_CHEAP
+} from '../../utils/Constants'
 
 const ProductQttItem = (props) => {
+    console.log(props)
     let borderColor
     let backgroundColor
     if (props.product.isCheaper === undefined) {
-        borderColor = 'black'
+        borderColor = BORDER_COLOR_ITEM_LIST
     }
     else {
-        borderColor = props.product.isCheaper ? 'green' : 'red'
-        backgroundColor = props.product.isCheaper ? '#EFE' : '#FEE'
+        borderColor = props.product.isCheaper ? BORDER_COLOR_ITEM_LIST_CHEAP : BORDER_COLOR_ITEM_LIST_EXPENSIVE
+        backgroundColor = props.product.isCheaper ? BACKGROUND_COLOR_ITEM_LIST_CHEAP : BACKGROUND_COLOR_ITEM_LIST_EXPENSIVE
     }
 
     return (
@@ -20,6 +28,7 @@ const ProductQttItem = (props) => {
                 <Text style={styles.title}>{i18n.t('product')} {props.product?.order}</Text>
                 <Text>{i18n.t('price')}: ${Number(props.product?.price).toFixed(2)}</Text>
                 <Text>{i18n.t('quantity')}: {Number(props.product?.qtt).toFixed(2)}</Text>
+                {!!props.product.type?.name && <Text>{i18n.t('measure')}: {props.product.type?.name}</Text>}
                 {
                     props.product.isCheaper !== undefined && props.product.isCheaper &&
                     <View style={[styles.boxExpensive]}>
@@ -27,7 +36,7 @@ const ProductQttItem = (props) => {
                             style={styles.menuItemIcon}
                             name='thumbs-up'
                             size={55}
-                            color='green'
+                            color={BORDER_COLOR_ITEM_LIST_CHEAP}
                         />
                     </View>
                 }
@@ -38,7 +47,7 @@ const ProductQttItem = (props) => {
                             style={styles.menuItemIcon}
                             name='long-arrow-alt-up'
                             size={55}
-                            color='red'
+                            color={BORDER_COLOR_ITEM_LIST_EXPENSIVE}
                         />
                         <Text style={styles.boxExpensivePercentage}>
                             {props.product.howMuchExpensive.toFixed(1)}%
@@ -52,7 +61,7 @@ const ProductQttItem = (props) => {
                     style={styles.menuItemIcon}
                     name='plus-square'
                     size={100}
-                    color='black'
+                    color={BORDER_COLOR_ITEM_LIST}
                 />
             </TouchableOpacity>
     );
@@ -82,7 +91,7 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     boxExpensivePercentage: {
-        color: 'red',
+        color: BORDER_COLOR_ITEM_LIST_EXPENSIVE,
         fontSize: 20,
         fontWeight: 'bold',
         marginLeft: 5,

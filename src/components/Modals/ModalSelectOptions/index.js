@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, Modal, FlatList, TouchableOpacity } from 'react-native';
 
 const GenericModal = (props) => {

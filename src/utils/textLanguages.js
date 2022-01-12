@@ -10,6 +10,7 @@ i18n.translations = {
         area: 'Area',
         pound: 'Pounds',
         ton: 'Tons',
+        uston: 'US Tons',
         tonne: 'Tonnes',
         foot: 'Feet',
         yard: 'Yards',
@@ -32,6 +33,7 @@ i18n.translations = {
         kg: 'Kilograms',
         g: 'Grams',
         mg: 'Miligrams',
+        stone: 'Stones',
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -41,7 +43,8 @@ i18n.translations = {
         area: 'Área',
         pound: 'Libras',
         ounce: 'Onças (oz)',
-        ton: 'Imp. Ton',
+        ton: 'Imperial Tons',
+        uston: 'US Tons',
         tonne: 'Toneladas',
         foot: 'Pés',
         yard: 'Jardas',
@@ -63,6 +66,7 @@ i18n.translations = {
         kg: 'Kilogramas',
         g: 'Gramas',
         mg: 'Miligramas',
+        stone: 'Stones',
     },
     es: { 
         quantity: 'Cantidade', 
@@ -72,7 +76,8 @@ i18n.translations = {
         area: 'Área',
         pound: 'Libras',
         ounce: 'Onças (Oz)',
-        ton: 'Imp. Ton',
+        ton: 'Imperial Tons',
+        uston: 'US Tons',
         tonne: 'Toneladas',
         foot: 'Pies',
         yard: 'Yardas',
@@ -94,6 +99,7 @@ i18n.translations = {
         kg: 'Kilogramos',
         g: 'Gramos',
         mg: 'Miligramos',
+        stone: 'Stones',
     },
 }
 

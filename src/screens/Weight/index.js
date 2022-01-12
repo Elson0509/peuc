@@ -7,8 +7,9 @@ import GenericModal from '../../components/Modals/GenericModal'
 import ModalSelectOptions from '../../components/Modals/ModalSelectOptions'
 import InputMeasure from '../../components/Inputs/InputMeasure'
 import { validateNumberStringWith2Decimals } from '../../utils/serviceFunctions'
+import {WEIGHT_MEASURES as measures} from '../../utils/Constants'
 
-const Weight = (props) => {
+const Weight = () => {
     const [products, setProducts] = useState([])
     const [modal, setModal] = useState(true)
     const [price, setPrice] = useState('')
@@ -24,37 +25,6 @@ const Weight = (props) => {
 
     const ref_priceInput = useRef()
     const ref_qttInput = useRef()
-
-    const measures = [
-        {
-            name: i18n.t('kg'),
-            factor: 1
-        },
-        {
-            name: i18n.t('g'),
-            factor: 1
-        },
-        {
-            name: i18n.t('mg'),
-            factor: 1
-        },
-        {
-            name: i18n.t('pound'),
-            factor: 1
-        },
-        {
-            name: i18n.t('tonne'),
-            factor: 1
-        },
-        {
-            name: i18n.t('ton'),
-            factor: 1
-        },
-        {
-            name: i18n.t('ounce'),
-            factor: 1
-        },
-    ]
 
     const selectMeasureHandler = measure => {
         setType(measure)
@@ -99,13 +69,13 @@ const Weight = (props) => {
         }
         //adding item...
         if (!order) {
-            const newItem = { id: new Date(), price, qtt }
+            const newItem = { id: new Date(), price, qtt, type }
             setProducts(prev => [...prev, newItem])
         }
         //or updating it in the list
         else {
             const newProducts = [...products]
-            newProducts[order - 1] = { id: new Date(), price, qtt }
+            newProducts[order - 1] = { id: new Date(), price, qtt, type }
             setProducts(newProducts)
         }
         setModal(false)
@@ -114,7 +84,7 @@ const Weight = (props) => {
     const productsList = _ => {
         let cheapper = 0
         let productList = products.map((el, ind) => { 
-            const relativePrice = el.price / el.qtt
+            const relativePrice = el.price / (el.qtt * el.type.factor)
             if (cheapper == 0 || relativePrice < cheapper){
                 cheapper = relativePrice
             }
