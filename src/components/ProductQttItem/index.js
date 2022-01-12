@@ -11,7 +11,6 @@ import {
 } from '../../utils/Constants'
 
 const ProductQttItem = (props) => {
-    console.log(props)
     let borderColor
     let backgroundColor
     if (props.product.isCheaper === undefined) {
@@ -25,10 +24,10 @@ const ProductQttItem = (props) => {
     return (
         props.product?.price ?
             <TouchableOpacity style={[styles.box, { borderColor, backgroundColor }]} onPress={() => props.productClickHandler(props.product)}>
-                <Text style={styles.title}>{i18n.t('product')} {props.product?.order}</Text>
+                <Text style={styles.title}>{i18n.t('item')} {props.product?.order}</Text>
                 <Text>{i18n.t('price')}: ${Number(props.product?.price).toFixed(2)}</Text>
-                <Text>{i18n.t('quantity')}: {Number(props.product?.qtt).toFixed(2)}</Text>
-                {!!props.product.type?.name && <Text>{i18n.t('measure')}: {props.product.type?.name}</Text>}
+                <Text>{i18n.t('quantity')}: {Number(props.product?.qtt).toFixed(2)} {!!props.product.type?.symbol ? props.product.type.symbol : ''}</Text>
+                
                 {
                     props.product.isCheaper !== undefined && props.product.isCheaper &&
                     <View style={[styles.boxExpensive]}>

@@ -13,7 +13,7 @@ const Home = (props) => {
                     renderItem={(obj) => (
                         <TouchableOpacity 
                             style={[styles.menuItem, {backgroundColor: obj.item.background, borderColor: obj.item.borderWidth}]}
-                            onPress={()=>{props.navigation.navigate(obj.item.screen)}}
+                            onPress={()=>{props.navigation.navigate(obj.item.screen, {measures: obj.item.measures})}}
                             >
                             <FontAwesome5
                                 style={styles.menuItemIcon}

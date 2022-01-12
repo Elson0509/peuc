@@ -7,9 +7,8 @@ import GenericModal from '../../components/Modals/GenericModal'
 import ModalSelectOptions from '../../components/Modals/ModalSelectOptions'
 import InputMeasure from '../../components/Inputs/InputMeasure'
 import { validateNumberStringWith2Decimals } from '../../utils/serviceFunctions'
-import {WEIGHT_MEASURES as measures} from '../../utils/Constants'
 
-const Weight = () => {
+const Measure = (props) => {
     const [products, setProducts] = useState([])
     const [modal, setModal] = useState(true)
     const [price, setPrice] = useState('')
@@ -155,7 +154,7 @@ const Weight = () => {
                 onShow={()=>ref_priceInput.current.focus()}
             >
                 <Text style={styles.titleModal}>
-                    {`${i18n.t('product')} ${order ? order : products.length + 1}`}
+                    {`${i18n.t('item')} ${order ? order : products.length + 1}`}
                 </Text>
                 <InputQtt
                     value={price}
@@ -168,10 +167,10 @@ const Weight = () => {
                 <InputQtt
                     value={qtt}
                     changed={onQttChange}
-                    label={i18n.t('weight')}
+                    label={i18n.t('quantity')}
                     dangerColor={dangerColorQtt}
                     elementRef={ref_qttInput}
-                    onSubmit={() => setModalOptions(true)}
+                    onSubmit={() => !type && setModalOptions(true)}
                 />
                 <InputMeasure
                     label={i18n.t('measure')}
@@ -183,7 +182,7 @@ const Weight = () => {
             <ModalSelectOptions
                 close={() => setModalOptions(false)}
                 modal={modalOptions}
-                measures={measures}
+                measures={props.route.params.measures}
                 action={selectMeasureHandler}
             />
         </View>
@@ -197,4 +196,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Weight;
+export default Measure;

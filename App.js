@@ -1,10 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 //importing pages
 import Home from './src/screens/Home';
 import Quantity from './src/screens/Quantity';
-import Weight from './src/screens/Weight';
+import Measure from './src/screens/Measure';
 import i18n from './src/utils/textLanguages';
 
 const Stack = createStackNavigator()
@@ -26,19 +25,25 @@ export default function App() {
         />
         <Stack.Screen 
           name='Weight' 
-          component={Weight} 
+          component={Measure} 
           options={{title:i18n.t('weight')}}
+        />
+        <Stack.Screen 
+          name='Distance' 
+          component={Measure} 
+          options={{title:i18n.t('distance')}}
+        />
+        <Stack.Screen 
+          name='Liquid' 
+          component={Measure} 
+          options={{title:i18n.t('liquid')}}
+        />
+        <Stack.Screen 
+          name='Area' 
+          component={Measure} 
+          options={{title:i18n.t('area')}}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -14,7 +14,7 @@ const GenericModal = (props) => {
                     keyExtractor={item=>item.name}
                     renderItem={ obj=> (
                         <TouchableOpacity style={styles.itemList} onPress={()=>props.action(obj.item)}>
-                            <Text style={styles.itemTextList}>{obj.item.name}</Text>
+                            <Text style={styles.itemTextList}>{obj.item.name} ({obj.item.symbol})</Text>
                         </TouchableOpacity>
                     )}
                 />
