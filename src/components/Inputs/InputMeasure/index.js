@@ -4,23 +4,24 @@ import {
     View,
     Text,
     TextInput,
+    TouchableOpacity,
 } from 'react-native';
-import i18n from '../../../utils/textLanguages';
 
-const InputPrice = (props) => {
+const InputMeasure = (props) => {
     return (
         <View style={styles.box}>
             <View>
-                <Text style={[styles.labelStyle, { color: 'black' }]}>{props.label}</Text>
+                <Text style={styles.labelStyle}>{props.label}</Text>
             </View>
-            <View>
+            <TouchableOpacity onPress={props.action}>
                 <TextInput
-                    style={[styles.txtInput]}
-                    keyboardType={"decimal-pad"}
+                    style={[styles.txtInput, {borderColor: props.dangerColor || 'black'}]}
                     value={props.value.toString()}
-                    onChangeText={props.changed}
+                    ref={props.elementRef}
+                    editable={false}
+                    onSubmitEditing={() => props.onSubmit ? props.onSubmit() : null}
                 />
-            </View>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         width: '100%',
     },
     txtInput: {
@@ -41,19 +42,18 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         paddingLeft: 10,
         backgroundColor: 'white',
-        borderColor: 'black',
         color: 'black',
         borderRadius: 5,
         width: 150,
         height: 50,
     },
     labelStyle: {
-        fontSize: 20,
+        color: 'black',
+        fontSize: 15,
         fontWeight: 'bold',
         marginBottom: 5,
-        marginLeft: 5,
-        color: 'white',
+        
     }
 });
 
-export default InputPrice;
+export default InputMeasure;

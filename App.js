@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 //importing pages
 import Home from './src/screens/Home';
 import Quantity from './src/screens/Quantity';
+import Weight from './src/screens/Weight';
 import i18n from './src/utils/textLanguages';
 
 const Stack = createStackNavigator()
@@ -22,6 +23,11 @@ export default function App() {
           name='Quantity' 
           component={Quantity} 
           options={{title:i18n.t('quantity')}}
+        />
+        <Stack.Screen 
+          name='Weight' 
+          component={Weight} 
+          options={{title:i18n.t('weight')}}
         />
       </Stack.Navigator>
     </NavigationContainer>
