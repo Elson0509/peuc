@@ -131,7 +131,7 @@ const Measure = (props) => {
     }
 
     return (
-        <View>
+        <View style={{ backgroundColor: props.route.params.backgroundColor, flex: 1}}>
             <FlatList
                 numColumns={2}
                 data={productsList()}

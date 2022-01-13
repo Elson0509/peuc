@@ -1,19 +1,19 @@
 import { createStackNavigator } from '@react-navigation/stack'
 //importing pages
-import HomePrices from '../HomePrices';
+import HomeMeasure from '../HomeMeasure';
 import Quantity from '../Quantity';
 import Measure from '../Measure';
 import i18n from '../../utils/textLanguages'
 
 const Stack = createStackNavigator()
 
-export default function PriceTab(props) {
+export default function MeasureTab(props) {
   return (
       <Stack.Navigator>
         <Stack.Screen 
           name='Home' 
-          component={HomePrices} 
-          options={{title:i18n.t('typeOfProduct'), headerTitleAlign: 'center', headerStyle:{backgroundColor: props.route.params.backgroundColorHeader }}}
+          component={HomeMeasure} 
+          options={{title:i18n.t('typeOfMeasure'), headerTitleAlign: 'center', headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
