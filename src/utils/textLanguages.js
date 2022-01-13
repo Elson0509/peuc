@@ -64,6 +64,8 @@ i18n.translations = {
         squareyard: 'Square yards',
         squaremile: 'Square miles',
         squareinch: 'Square inches',
+        price: 'Compare Prices',
+        convert: 'Convert'
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -127,6 +129,8 @@ i18n.translations = {
         squareyard: 'Jardas quadradas',
         squaremile: 'Milhas quadradas',
         squareinch: 'Polegadas quadradas',
+        price: 'Comparar preços',
+        convert: 'Converter'
     },
     es: { 
         quantity: 'Cantidade', 
@@ -190,6 +194,8 @@ i18n.translations = {
         squareyard: 'Yardas cuadradas',
         squaremile: 'Millas cuadradas',
         squareinch: 'Pulgadas cuadradas',
+        price: 'Comparar precios',
+        convert: 'Convertir'
     },
 }
 
