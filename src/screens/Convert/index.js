@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, } from 'react-native';
 import InputQtt from '../../components/Inputs/InputQtt';
 import InputMeasure from '../../components/Inputs/InputMeasure';
 import ModalSelectOptions from '../../components/Modals/ModalSelectOptions'
-import { validateNumberStringWith2Decimals } from '../../utils/serviceFunctions'
+import { validateNumberStringWithDecimals } from '../../utils/serviceFunctions'
 import i18n from '../../utils/textLanguages';
 import ResultBox from '../../components/ResultBox';
 
@@ -16,14 +16,12 @@ const Convert = (props) => {
     const [result, setResult] = useState('')
 
     const onValueChange = text => {
-        const validateNumber = validateNumberStringWith2Decimals(text)
+        const validateNumber = validateNumberStringWithDecimals(text, 4)
         if (validateNumber){
             setValue(validateNumber)
             if(!fromMeasure || !toMeasure){
                 return setResult('')
             }
-            //calculate
-            //setResult(validateNumber + ' ' + toMeasure.symbol)
             setResult(calculateResult(validateNumber, fromMeasure, toMeasure))
         }
         if (text == ''){
@@ -38,7 +36,6 @@ const Convert = (props) => {
         if(!value || !toMeasure)
             setResult('')
         else{
-            //setResult(value + ' ' + toMeasure.symbol)
             setResult(calculateResult(value, measure, toMeasure))
         }
         
@@ -49,14 +46,13 @@ const Convert = (props) => {
         if(!value || !fromMeasure)
             setResult('')
         else{
-            //setResult(value + ' ' + measure.symbol)
             setResult(calculateResult(value, fromMeasure, measure))
         }
     }
 
     const calculateResult = (number, fromM, toM) => {
         const result = number * fromM.factor / toM.factor
-        return result.toFixed(2) + ' ' + toM.symbol
+        return Number(result.toFixed(2)) + ' ' + toM.symbol
     }
 
     return (

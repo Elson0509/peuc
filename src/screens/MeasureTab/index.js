@@ -40,6 +40,24 @@ export default function MeasureTab(props) {
           options={{title:i18n.t('area'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
+        <Stack.Screen 
+          name='DataTransfer' 
+          component={Convert} 
+          options={{title:i18n.t('dataTransfer'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
+        <Stack.Screen 
+          name='Storage' 
+          component={Convert} 
+          options={{title:i18n.t('storage'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
+        <Stack.Screen 
+          name='Energy' 
+          component={Convert} 
+          options={{title:i18n.t('energy'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
       </Stack.Navigator>
     
   );

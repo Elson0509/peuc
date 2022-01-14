@@ -13,9 +13,9 @@ export const BACKGROUND_COLOR_CONVERT_SCREEN_HEADER = '#CF9FFF'
 export const WEIGHT_MEASURES = [
     //the reference for factor is g
     {
-        name: i18n.t('kg'),
-        factor: 1000,
-        symbol: 'Kg'
+        name: i18n.t('mg'),
+        factor: 0.001,
+        symbol: 'mg'
     },
     {
         name: i18n.t('g'),
@@ -23,9 +23,9 @@ export const WEIGHT_MEASURES = [
         symbol: 'g'
     },
     {
-        name: i18n.t('mg'),
-        factor: 0.001,
-        symbol: 'mg'
+        name: i18n.t('kg'),
+        factor: 1000,
+        symbol: 'Kg'
     },
     {
         name: i18n.t('pound'),
@@ -228,5 +228,137 @@ export const AREA_MEASURES = [
         name: i18n.t('squareinch'),
         factor: 0.00064516,
         symbol: 'in²'
+    },
+]
+
+export const DATA_TRANSFER = [
+    // the reference for factor is megabyte
+    {
+        name: i18n.t('bit') + ' ' + i18n.t('perSecond'),
+        factor: 0.000000125,
+        symbol: 'bit/s'
+    },
+    {
+        name: i18n.t('kilobit') + ' ' + i18n.t('perSecond'),
+        factor: 0.000125,
+        symbol: 'kbit/s'
+    },
+    {
+        name: i18n.t('kilobyte') + ' ' + i18n.t('perSecond'),
+        factor: 0.001,
+        symbol: 'kB/s'
+    },
+    {
+        name: i18n.t('megabit') + ' ' + i18n.t('perSecond'),
+        factor: 0.125,
+        symbol: 'Mbit/s'
+    },
+    {
+        name: i18n.t('megabyte') + ' ' + i18n.t('perSecond'),
+        factor: 1,
+        symbol: 'MB/s'
+    },
+    {
+        name: i18n.t('gigabit') + ' ' + i18n.t('perSecond'),
+        factor: 125,
+        symbol: 'Bgit/s'
+    },
+    {
+        name: i18n.t('gigabyte') + ' ' + i18n.t('perSecond'),
+        factor: 1000,
+        symbol: 'GB/s'
+    },
+    {
+        name: i18n.t('terabit') + ' ' + i18n.t('perSecond'),
+        factor: 125000,
+        symbol: 'Tbit/s'
+    },
+    {
+        name: i18n.t('terabyte') + ' ' + i18n.t('perSecond'),
+        factor: 1000000,
+        symbol: 'TB/s'
+    }
+]
+
+export const STORAGE = [
+    // the reference for factor is megabyte
+    {
+        name: i18n.t('bit'),
+        factor: 0.000000125,
+        symbol: 'bit'
+    },
+    {
+        name: i18n.t('kilobyte'),
+        factor: 0.001,
+        symbol: 'kB'
+    },
+    {
+        name: i18n.t('megabyte'),
+        factor: 1,
+        symbol: 'MB'
+    },
+    {
+        name: i18n.t('gigabyte'),
+        factor: 1000,
+        symbol: 'GB'
+    },
+    {
+        name: i18n.t('terabyte'),
+        factor: 1000000,
+        symbol: 'TB'
+    },
+    {
+        name: i18n.t('petabyte'),
+        factor: 1000000000,
+        symbol: 'PB'
+    }
+]
+
+export const ENERGY = [
+    // the reference for factor is watt hour
+    {
+        name: i18n.t('joule'),
+        factor: 0.000277778,
+        symbol: 'K'
+    },
+    {
+        name: i18n.t('kilojoule'),
+        factor: 0.277778,
+        symbol: 'kJ'
+    },
+    {
+        name: i18n.t('calorie'),
+        factor: 0.00116222,
+        symbol: ''
+    },
+    {
+        name: i18n.t('kilocalorie'),
+        factor: 1.16222,
+        symbol: 'cal'
+    },
+    {
+        name: i18n.t('watthour'),
+        factor: 1,
+        symbol: 'Wh'
+    },
+    {
+        name: i18n.t('kilowatthour'),
+        factor: 1000,
+        symbol: 'kWh'
+    },
+    {
+        name: i18n.t('britishThermalUnit'),
+        factor: 0.293071,
+        symbol: 'Btu'
+    },
+    {
+        name: i18n.t('usTherm'),
+        factor: 29300.1,
+        symbol: 'thm'
+    },
+    {
+        name: i18n.t('footPound'),
+        factor: 0.000376616,
+        symbol: 'ft⋅lbf'
     },
 ]

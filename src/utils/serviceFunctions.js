@@ -1,4 +1,4 @@
-export const validateNumberStringWith2Decimals = value => {
+export const validateNumberStringWithDecimals = (value, decimals = 2) => {
     let countDots = 0
     let decimalPlaces = 0
     for (let i = 0; i < value.length; i++) {
@@ -15,7 +15,7 @@ export const validateNumberStringWith2Decimals = value => {
             decimalPlaces++
         }
     }
-    if (countDots <= 1 && decimalPlaces <= 2) {
+    if (countDots <= 1 && decimalPlaces <= decimals) {
         return value
     }
 }

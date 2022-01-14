@@ -6,7 +6,7 @@ import ProductQttItem from '../../components/ProductQttItem'
 import GenericModal from '../../components/Modals/GenericModal'
 import ModalSelectOptions from '../../components/Modals/ModalSelectOptions'
 import InputMeasure from '../../components/Inputs/InputMeasure'
-import { validateNumberStringWith2Decimals } from '../../utils/serviceFunctions'
+import { validateNumberStringWithDecimals } from '../../utils/serviceFunctions'
 
 const Measure = (props) => {
     const [products, setProducts] = useState([])
@@ -31,7 +31,7 @@ const Measure = (props) => {
     }
 
     const onPriceChange = text => {
-        const validateNumber = validateNumberStringWith2Decimals(text)
+        const validateNumber = validateNumberStringWithDecimals(text, 2)
         if (validateNumber)
             setPrice(validateNumber)
         if (text == '')
@@ -39,7 +39,7 @@ const Measure = (props) => {
     }
 
     const onQttChange = text => {
-        const validateNumber = validateNumberStringWith2Decimals(text)
+        const validateNumber = validateNumberStringWithDecimals(text)
         if (validateNumber)
             setQtt(validateNumber)
         if (text == '')

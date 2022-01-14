@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, ImageBackground } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'
-import menuOptions from '../../utils/menuOptions';
+import { menuOptionsPrices } from '../../utils/menuOptions';
 
 const HomePrices = (props) => {
     return (
         <View style={[styles.container, { backgroundColor: props.route.params.backgroundColor }]}>
             <FlatList
-                data={menuOptions}
+                data={menuOptionsPrices}
                 keyExtractor={item => item.screen}
                 renderItem={(obj) => (
                     <TouchableOpacity

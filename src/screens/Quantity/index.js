@@ -4,7 +4,7 @@ import i18n from '../../utils/textLanguages';
 import InputQtt from '../../components/Inputs/InputQtt';
 import ProductQttItem from '../../components/ProductQttItem';
 import GenericModal from '../../components/Modals/GenericModal';
-import { validateNumberStringWith2Decimals } from '../../utils/serviceFunctions'
+import { validateNumberStringWithDecimals } from '../../utils/serviceFunctions'
 
 const Quantity = (props) => {
     const [products, setProducts] = useState([])
@@ -21,7 +21,7 @@ const Quantity = (props) => {
     const ref_qttInput = useRef()
 
     const onPriceChange = text => {
-        const validateNumber = validateNumberStringWith2Decimals(text)
+        const validateNumber = validateNumberStringWithDecimals(text)
         if (validateNumber)
             setPrice(validateNumber)
         if (text == '')
@@ -29,7 +29,7 @@ const Quantity = (props) => {
     }
 
     const onQttChange = text => {
-        const validateNumber = validateNumberStringWith2Decimals(text)
+        const validateNumber = validateNumberStringWithDecimals(text)
         if (validateNumber)
             setQtt(validateNumber)
         if (text == '')

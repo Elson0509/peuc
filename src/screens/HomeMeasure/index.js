@@ -1,16 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'
-import menuOptions from '../../utils/menuOptions';
+import { menuOptionsMeasure } from '../../utils/menuOptions';
 
 const HomeMeasure = (props) => {
-    //removing the first Option (Quantity)
-    const options = menuOptions.filter((el, ind) => ind != 0)
-
     return (
         <View style={[styles.container, { backgroundColor: props.route.params.backgroundColor }]}>
             <FlatList
-                data={options}
+                data={menuOptionsMeasure}
                 keyExtractor={item => item.screen}
                 renderItem={(obj) => (
                     <TouchableOpacity
