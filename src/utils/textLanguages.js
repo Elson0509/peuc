@@ -65,8 +65,12 @@ i18n.translations = {
         squareyard: 'Square yards',
         squaremile: 'Square miles',
         squareinch: 'Square inches',
-        price: 'Compare Prices',
-        convert: 'Convert'
+        comparePrice: 'Compare Prices',
+        convert: 'Convert',
+        value: 'Value',
+        from: 'From',
+        to: 'To',
+        result: 'Result'
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -131,8 +135,12 @@ i18n.translations = {
         squareyard: 'Jardas quadradas',
         squaremile: 'Milhas quadradas',
         squareinch: 'Polegadas quadradas',
-        price: 'Comparar preços',
-        convert: 'Converter'
+        comparePrice: 'Comparar preços',
+        convert: 'Converter',
+        value: 'Valor',
+        from: 'De',
+        to: 'Para',
+        result: 'Resultado'
     },
     es: { 
         quantity: 'Cantidade', 
@@ -197,8 +205,12 @@ i18n.translations = {
         squareyard: 'Yardas cuadradas',
         squaremile: 'Millas cuadradas',
         squareinch: 'Pulgadas cuadradas',
-        price: 'Comparar precios',
-        convert: 'Convertir'
+        comparePrice: 'Comparar precios',
+        convert: 'Convertir',
+        value: 'Valor',
+        from: 'De',
+        to: 'a',
+        result: 'Resultado'
     },
 }
 

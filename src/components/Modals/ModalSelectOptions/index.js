@@ -33,11 +33,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         elevation: 10,
         shadowOpacity: 0.25,
-        shadowRadius: 4
+        shadowRadius: 4,
+        borderWidth: 1,
+        borderColor: 'blue'
     },
     itemList: {
         borderWidth: 1,
-        width: 250,
+        width: 190,
         padding: 20,
         margin: 5,
         borderRadius: 10,

@@ -25,7 +25,7 @@ const Tabs = () => {
             name="Price" 
             component={PriceTab} 
             options={{
-                tabBarLabel: i18n.t('price'),
+                tabBarLabel: i18n.t('comparePrice'),
                 tabBarIcon: () => <FontAwesome5 name='dollar-sign' style={{textAlign: 'center'}} size={20}/>
             }}
             initialParams={{ backgroundColor: BACKGROUND_COLOR_PRICES_SCREEN, backgroundColorHeader: BACKGROUND_COLOR_PRICES_SCREEN_HEADER }}

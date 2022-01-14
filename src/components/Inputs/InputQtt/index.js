@@ -10,7 +10,7 @@ const InputQtt = (props) => {
     return (
         <View style={styles.box}>
             <View>
-                <Text style={styles.labelStyle}>{props.label}</Text>
+                <Text style={[styles.labelStyle, {fontSize: props.fontSize || 20}]}>{props.label}</Text>
             </View>
             <View>
                 <TextInput
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         color: 'black',
         borderRadius: 5,
-        width: 150,
+        width: 180,
         height: 50,
     },
     labelStyle: {

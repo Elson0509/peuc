@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
 //importing pages
 import HomeMeasure from '../HomeMeasure';
-import Quantity from '../Quantity';
+import Convert from '../Convert';
 import Measure from '../Measure';
 import i18n from '../../utils/textLanguages'
 
@@ -17,32 +17,26 @@ export default function MeasureTab(props) {
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
-          name='Quantity' 
-          component={Quantity} 
-          options={{title:i18n.t('quantity'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
-          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
-        />
-        <Stack.Screen 
           name='Weight' 
-          component={Measure} 
+          component={Convert} 
           options={{title:i18n.t('weight'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
           name='Distance' 
-          component={Measure} 
+          component={Convert} 
           options={{title:i18n.t('distance'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
           name='Liquid' 
-          component={Measure} 
+          component={Convert} 
           options={{title:i18n.t('liquid'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
           name='Area' 
-          component={Measure} 
+          component={Convert} 
           options={{title:i18n.t('area'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
