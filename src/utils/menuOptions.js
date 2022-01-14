@@ -7,6 +7,11 @@ import {
     DATA_TRANSFER,
     STORAGE,
     ENERGY,
+    FREQUENCY,
+    FUEL,
+    ANGLE,
+    PRESSURE,
+    SPEED
 } from './Constants'
 
 export const menuOptionsPrices = [
@@ -108,5 +113,45 @@ export const menuOptionsMeasure = [
         background: '#B7BB49',
         borderWidth: '#959927',
         measures: ENERGY
+    },
+    {
+        icon: 'wave-square',
+        title: i18n.t('frequency'),
+        screen: 'Frequency',
+        background: '#B7BB49',
+        borderWidth: '#959927',
+        measures: FREQUENCY
+    },
+    {
+        icon: 'gas-pump',
+        title: i18n.t('fuel'),
+        screen: 'Fuel',
+        background: '#B7BB49',
+        borderWidth: '#959927',
+        measures: FUEL
+    },
+    {
+        icon: 'draw-polygon',
+        title: i18n.t('angle'),
+        screen: 'Angle',
+        background: '#B7BB49',
+        borderWidth: '#959927',
+        measures: ANGLE
+    },
+    {
+        icon: 'gem',
+        title: i18n.t('pressure'),
+        screen: 'Pressure',
+        background: '#B7BB49',
+        borderWidth: '#959927',
+        measures: PRESSURE
+    },
+    {
+        icon: 'tachometer-alt',
+        title: i18n.t('speed'),
+        screen: 'Speed',
+        background: '#B7BB49',
+        borderWidth: '#959927',
+        measures: SPEED
     },
 ]

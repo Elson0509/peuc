@@ -58,6 +58,36 @@ export default function MeasureTab(props) {
           options={{title:i18n.t('energy'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
+        <Stack.Screen 
+          name='Frequency' 
+          component={Convert} 
+          options={{title:i18n.t('frequency'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
+        <Stack.Screen 
+          name='Fuel' 
+          component={Convert} 
+          options={{title:i18n.t('fuel'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
+        <Stack.Screen 
+          name='Angle' 
+          component={Convert} 
+          options={{title:i18n.t('angle'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, resultDecimalPlaces: 5 }}
+        />
+        <Stack.Screen 
+          name='Pressure' 
+          component={Convert} 
+          options={{title:i18n.t('pressure'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, resultDecimalPlaces: 5 }}
+        />
+        <Stack.Screen 
+          name='Speed' 
+          component={Convert} 
+          options={{title:i18n.t('speed'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
       </Stack.Navigator>
     
   );

@@ -52,7 +52,7 @@ const Convert = (props) => {
 
     const calculateResult = (number, fromM, toM) => {
         const result = number * fromM.factor / toM.factor
-        return Number(result.toFixed(2)) + ' ' + toM.symbol
+        return Number(result.toFixed(props.route.params.resultDecimalPlaces || 2)) + ' ' + toM.symbol
     }
 
     return (

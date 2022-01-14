@@ -97,7 +97,41 @@ i18n.translations = {
         electronvolt: 'Electronvolt',
         britishThermalUnit: 'BTU',
         usTherm: 'US therm',
-        footPound: 'Foot-pound'
+        footPound: 'Foot-pound',
+        //frequency
+        frequency: 'Frequency',
+        hertz: 'Hertz',
+        kilohertz: 'Kilohertz',
+        megahertz: 'Megahertz',
+        gigahertz: 'Gigahertz',
+        //fuel
+        fuel: 'Fuel',
+        kmlt: 'Kilometers per Liter',
+        lt100km: 'Liter per 100 Km',
+        mlgallon: 'Miles per gallon',
+        mlgallonImp: 'Miles per gallon Imperial',
+        //angle
+        angle: 'Angle',
+        degree: 'Degrees',
+        milliradian: 'Milliradians',
+        minuteofarc: 'Minutes of arc',
+        radian: 'Radians',
+        secondofarc: 'Seconds of arc',
+        gradian: 'Gradians',
+        //pressure
+        pressure: 'Pressure',
+        bar: 'Bar',
+        poundPerSquareInch: 'Pound per square inch',
+        atmosphere: 'Atmosphere',
+        torr: 'Torr',
+        pascal: 'Pascal',
+        //speed
+        speed: 'Speed',
+        milesperhour: 'Miles por hour',
+        footpersecond: 'Feet per second',
+        meterpersecond: 'Meters per second',
+        kmperhour: 'kilometers per hour',
+        knot: 'Knots',
     },
     pt: { 
         quantity: 'Quantidade', 
@@ -194,7 +228,41 @@ i18n.translations = {
         electronvolt: 'Elétron-volts',
         britishThermalUnit: 'BTU',
         usTherm: 'Therm US',
-        footPound: 'Pés-libra'
+        footPound: 'Pés-libra',
+        //frequency
+        frequency: 'Frequência',
+        hertz: 'Hertz',
+        kilohertz: 'Kilohertz',
+        megahertz: 'Megahertz',
+        gigahertz: 'Gigahertz',
+        //fuel
+        fuel: 'Combustível',
+        kmlt: 'Quilômetros por litro',
+        lt100km: 'Litros por 100 km',
+        mlgallon: 'Milhas por Galão',
+        mlgallonImp: 'Milhas por Galão Imperial',
+        //angle
+        angle: 'Ângulo',
+        degree: 'Graus',
+        milliradian: 'Miliradianos',
+        minuteofarc: 'Minutos de arco',
+        radian: 'Radianos',
+        secondofarc: 'Segundos de arco',
+        gradian: 'Gradianos',
+        //pressure
+        pressure: 'Pressão',
+        bar: 'Bar',
+        poundPerSquareInch: 'Libras por polegada quadrada',
+        atmosphere: 'Atmosfera',
+        torr: 'Torr',
+        pascal: 'Pascal',
+        //speed
+        speed: 'Velocidade',
+        milesperhour: 'Milhas por hora',
+        footpersecond: 'Pés por segundo',
+        meterpersecond: 'Metros por segundo',
+        kmperhour: 'Quilômetros por hora',
+        knot: 'Knots',
     },
     es: { 
         quantity: 'Cantidade', 
@@ -291,7 +359,41 @@ i18n.translations = {
         electronvolt: 'Eléctrón voltio',
         britishThermalUnit: 'BTU',
         usTherm: 'Therm US',
-        footPound: 'Pie-libra'
+        footPound: 'Pie-libra',
+        //frequency
+        frequency: 'Frecuencia',
+        hertz: 'Hertz',
+        kilohertz: 'Kilohertz',
+        megahertz: 'Megahertz',
+        gigahertz: 'Gigahertz',
+        //fuel
+        fuel: 'Combustible',
+        kmlt: 'Kilómetros por litro',
+        lt100km: 'Litros por 100 km',
+        mlgallon: 'Millas por galón',
+        mlgallonImp: 'Millas por galón imperial',
+        //angle
+        angle: 'Ángulo',
+        degree: 'Grados',
+        milliradian: 'Milliradianos',
+        minuteofarc: 'Minutos de arco',
+        radian: 'Radianos',
+        secondofarc: 'Segundos de arco',
+        gradian: 'Grados',
+        //pressure
+        pressure: 'Presión',
+        bar: 'Bar',
+        poundPerSquareInch: 'Libras por pulgada cuadrada',
+        atmosphere: 'Atmósfera',
+        torr: 'Torr',
+        pascal: 'Pascal',
+        //speed
+        speed: 'Velocidad',
+        milesperhour: 'Millas por hora',
+        footpersecond: 'Pies por segundo',
+        meterpersecond: 'Metros por segundo',
+        kmperhour: 'Kilómetros por hora',
+        knot: 'Knots',
     },
 }
 

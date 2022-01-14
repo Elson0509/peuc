@@ -362,3 +362,143 @@ export const ENERGY = [
         symbol: 'ft⋅lbf'
     },
 ]
+
+export const FREQUENCY = [
+    // the reference for factor is kilohertz
+    {
+        name: i18n.t('hertz'),
+        factor: 0.001,
+        symbol: 'Hz'
+    },
+    {
+        name: i18n.t('kilohertz'),
+        factor: 1,
+        symbol: 'kHz'
+    },
+    {
+        name: i18n.t('megahertz'),
+        factor: 1000,
+        symbol: 'mHz'
+    },
+    {
+        name: i18n.t('gigahertz'),
+        factor: 1000000,
+        symbol: 'gHz'
+    },
+]
+
+export const FUEL = [
+    // the reference for factor is km/l
+    {
+        name: i18n.t('kmlt'),
+        factor: 1,
+        symbol: 'Km/L'
+    },
+    // {
+    //     name: i18n.t('lt100km'),
+    //     factor: 1,
+    //     symbol: 'L/100Km'
+    // },
+    {
+        name: i18n.t('mlgallon'),
+        factor: 0.425144,
+        symbol: 'mpg'
+    },
+    {
+        name: i18n.t('mlgallonImp'),
+        factor: 0.354006,
+        symbol: 'mgp imp'
+    },
+]
+
+export const ANGLE = [
+    // the reference for factor is degree
+    {
+        name: i18n.t('degree'),
+        factor: 1,
+        symbol: '°'
+    },
+    {
+        name: i18n.t('milliradian'),
+        factor: 0.0572958,
+        symbol: 'mrad'
+    },
+    {
+        name: i18n.t('minuteofarc'),
+        factor: 0.0166667,
+        symbol: '′'
+    },
+    {
+        name: i18n.t('radian'),
+        factor: 57.2958,
+        symbol: 'rad'
+    },
+    {
+        name: i18n.t('secondofarc'),
+        factor: 0.000277778,
+        symbol: '″'
+    },
+    {
+        name: i18n.t('gradian'),
+        factor: .9,
+        symbol: 'grad'
+    },
+]
+
+export const PRESSURE = [
+    // the reference for factor is bar
+    {
+        name: i18n.t('bar'),
+        factor: 1,
+        symbol: 'bar'
+    },
+    {
+        name: i18n.t('poundPerSquareInch'),
+        factor: 0.0689476,
+        symbol: 'psi'
+    },
+    {
+        name: i18n.t('atmosphere'),
+        factor: 1.01325,
+        symbol: 'atm'
+    },
+    {
+        name: i18n.t('torr'),
+        factor: 0.00133322,
+        symbol: 'Torr'
+    },
+    {
+        name: i18n.t('pascal'),
+        factor: 0.00001,
+        symbol: 'Pa'
+    },
+]
+
+export const SPEED = [
+    // the reference for factor is m/s
+    {
+        name: i18n.t('milesperhour'),
+        factor: 0.44704,
+        symbol: 'mph'
+    },
+    {
+        name: i18n.t('footpersecond'),
+        factor: 0.3048,
+        symbol: 'ft/s'
+    },
+    {
+        name: i18n.t('meterpersecond'),
+        factor: 1,
+        symbol: 'm/s'
+    },
+    {
+        name: i18n.t('kmperhour'),
+        factor: 0.277778,
+        symbol: 'km/h'
+    },
+    {
+        name: i18n.t('knot'),
+        factor: 0.514444,
+        symbol: 'kn'
+    },
+]
