@@ -17,14 +17,14 @@ const Convert = (props) => {
 
     const onValueChange = text => {
         const validateNumber = validateNumberStringWithDecimals(text, 4)
-        if (validateNumber){
+        if (validateNumber) {
             setValue(validateNumber)
-            if(!fromMeasure || !toMeasure){
+            if (!fromMeasure || !toMeasure) {
                 return setResult('')
             }
             setResult(calculateResult(validateNumber, fromMeasure, toMeasure))
         }
-        if (text == ''){
+        if (text == '') {
             setValue('')
             setResult('')
         }
@@ -33,26 +33,36 @@ const Convert = (props) => {
     const selectFromHandler = measure => {
         setFromMeasure(measure)
         setModalFrom(false)
-        if(!value || !toMeasure)
+        if (!value || !toMeasure)
             setResult('')
-        else{
+        else {
             setResult(calculateResult(value, measure, toMeasure))
         }
-        
+
     }
     const selectToHandler = measure => {
         setToMeasure(measure)
         setModalTo(false)
-        if(!value || !fromMeasure)
+        if (!value || !fromMeasure)
             setResult('')
-        else{
+        else {
             setResult(calculateResult(value, fromMeasure, measure))
         }
     }
 
     const calculateResult = (number, fromM, toM) => {
-        const result = number * fromM.factor / toM.factor
-        return Number(result.toFixed(props.route.params.resultDecimalPlaces || 2)) + ' ' + toM.symbol
+        if (!fromM.formulaFrom) {
+            const result = number * fromM.factor / toM.factor
+            return Number(result.toFixed(props.route.params.resultDecimalPlaces || 2)) + ' ' + toM.symbol
+        }
+        else{
+            //Deserializing functions
+            const toReference = new Function('return ' + fromM.formulaTo.toString())()
+            const toNewMeasure = new Function('return ' + toM.formulaFrom.toString())()
+            //calculating result
+            let result = toReference(number)
+            return Number(toNewMeasure(Number(result)).toFixed(props.route.params.resultDecimalPlaces || 2)) + ' ' + toM.symbol
+        }
     }
 
     return (

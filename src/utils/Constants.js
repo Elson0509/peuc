@@ -9,6 +9,10 @@ export const BACKGROUND_COLOR_PRICES_SCREEN = '#FFFF8F'
 export const BACKGROUND_COLOR_PRICES_SCREEN_HEADER = '#FFDB58'
 export const BACKGROUND_COLOR_CONVERT_SCREEN = '#F1C1FF'
 export const BACKGROUND_COLOR_CONVERT_SCREEN_HEADER = '#CF9FFF'
+export const BACKGROUND_COLOR_BUTTONS_CONVERT_SCREEN = '#F8A45E'
+export const BORDER_COLOR_BUTTONS_CONVERT_SCREEN = '#E5712B'
+export const BACKGROUND_COLOR_BUTTONS_PRICE_SCREEN = '#5678AD'
+export const BORDER_COLOR_BUTTONS_PRICE_SCREEN = '#34568B'
 
 export const WEIGHT_MEASURES = [
     //the reference for factor is g
@@ -500,5 +504,90 @@ export const SPEED = [
         name: i18n.t('knot'),
         factor: 0.514444,
         symbol: 'kn'
+    },
+]
+
+export const TIME = [
+    // the reference for factor is hour
+    {
+        name: i18n.t('millisecond'),
+        factor: 0.000000277777,
+        symbol: 'ms'
+    },
+    {
+        name: i18n.t('second'),
+        factor: 0.000277778,
+        symbol: 's'
+    },
+    {
+        name: i18n.t('minute'),
+        factor: 0.0166667,
+        symbol: 'min'
+    },
+    {
+        name: i18n.t('hour'),
+        factor: 1,
+        symbol: 'h'
+    },
+    {
+        name: i18n.t('day'),
+        factor: 24,
+        symbol: 'd'
+    },
+    {
+        name: i18n.t('week'),
+        factor: 168,
+        symbol: 'w'
+    },
+    {
+        name: i18n.t('month'),
+        factor: 730,
+        symbol: 'M'
+    },
+    {
+        name: i18n.t('year'),
+        factor: 8760,
+        symbol: 'a'
+    },
+    {
+        name: i18n.t('decade'),
+        factor: 87600,
+        symbol: 'dec'
+    },
+    {
+        name: i18n.t('century'),
+        factor: 876000,
+        symbol: 'C'
+    },
+]
+
+const fromCToC = x => x 
+const fromKToC = x => x + 273.15
+const fromCToK = x => x - 273.15
+const fromFToC = x => (x * 9/5) + 32
+const fromCToF = x => (x - 32) * 5 / 9
+
+export const TEMPERATURE = [
+    // the reference for factor is celsius
+    {
+        name: i18n.t('celsius'),
+        factor: 1,
+        symbol: '℃',
+        formulaFrom: fromCToC.toString(),
+        formulaTo: fromCToC.toString(),
+    },
+    {
+        name: i18n.t('kelvin'),
+        factor: 1,
+        symbol: 'K',
+        formulaFrom: fromKToC.toString(),
+        formulaTo: fromCToK.toString(),
+    },
+    {
+        name: i18n.t('fahrenheit'),
+        factor: 1,
+        symbol: '℉',
+        formulaFrom: fromFToC.toString(),
+        formulaTo: fromCToF.toString(),
     },
 ]

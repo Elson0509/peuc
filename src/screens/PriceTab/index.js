@@ -13,7 +13,7 @@ export default function PriceTab(props) {
         <Stack.Screen 
           name='Home' 
           component={HomePrices} 
-          options={{title:i18n.t('typeOfProduct'), headerTitleAlign: 'center', headerStyle:{backgroundColor: props.route.params.backgroundColorHeader }}}
+          options={{title:i18n.t('typeOfProduct').toUpperCase(), headerTitleAlign: 'center', headerStyle:{backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 

@@ -13,7 +13,7 @@ export default function MeasureTab(props) {
         <Stack.Screen 
           name='Home' 
           component={HomeMeasure} 
-          options={{title:i18n.t('typeOfMeasure'), headerTitleAlign: 'center', headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          options={{title:i18n.t('typeOfMeasure').toUpperCase(), headerTitleAlign: 'center', headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
         <Stack.Screen 
@@ -86,6 +86,18 @@ export default function MeasureTab(props) {
           name='Speed' 
           component={Convert} 
           options={{title:i18n.t('speed'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+        />
+        <Stack.Screen 
+          name='Time' 
+          component={Convert} 
+          options={{title:i18n.t('time'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, resultDecimalPlaces: 5 }}
+        />
+        <Stack.Screen 
+          name='Temperature' 
+          component={Convert} 
+          options={{title:i18n.t('temperature'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
           initialParams={{ backgroundColor: props.route.params.backgroundColor }}
         />
       </Stack.Navigator>
