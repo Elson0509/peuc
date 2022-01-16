@@ -9,7 +9,7 @@ import {
 
 const ActionButtons = (props) => {
     return (
-        <View style={{ flexDirection: 'row', justifyContent: 'center' }} >
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: '100%' }} >
             <Pressable
                 style={[styles.button, { backgroundColor: '#1212FF' }]}
                 onPress={() => props.btn1Pressed()}
@@ -38,7 +38,7 @@ const ActionButtons = (props) => {
 const styles = StyleSheet.create({
     button: {
         borderRadius: 12,
-        padding: 12,
+        padding: 13,
         elevation: 2,
         marginLeft: 10
     },

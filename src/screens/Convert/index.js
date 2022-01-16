@@ -16,7 +16,7 @@ const Convert = (props) => {
     const [result, setResult] = useState('')
 
     const onValueChange = text => {
-        const validateNumber = validateNumberStringWithDecimals(text, 4)
+        const validateNumber = validateNumberStringWithDecimals(text, 4, props.route.params.allowNegativeNumbers)
         if (validateNumber) {
             setValue(validateNumber)
             if (!fromMeasure || !toMeasure) {
@@ -71,20 +71,20 @@ const Convert = (props) => {
                 value={value}
                 changed={onValueChange}
                 label={i18n.t('value')}
-                fontSize={25}
+                fontSize={20}
             />
             <InputMeasure
                 label={i18n.t('from')}
                 value={fromMeasure?.name || ''}
                 action={() => setModalFrom(true)}
-                fontSize={25}
+                fontSize={20}
                 inputSize={15}
             />
             <InputMeasure
                 label={i18n.t('to')}
                 value={toMeasure?.name || ''}
                 action={() => setModalTo(true)}
-                fontSize={25}
+                fontSize={20}
                 inputSize={15}
             />
             <ModalSelectOptions
@@ -100,7 +100,7 @@ const Convert = (props) => {
                 action={selectToHandler}
             />
             {
-                !!result && <ResultBox
+                !!result && result.indexOf('NaN') === -1 && <ResultBox
                     value={result}
                 />
             }

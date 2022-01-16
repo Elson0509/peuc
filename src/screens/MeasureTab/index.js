@@ -74,7 +74,7 @@ export default function MeasureTab(props) {
           name='Angle' 
           component={Convert} 
           options={{title:i18n.t('angle'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
-          initialParams={{ backgroundColor: props.route.params.backgroundColor, resultDecimalPlaces: 5 }}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, resultDecimalPlaces: 2, allowNegativeNumbers: true }}
         />
         <Stack.Screen 
           name='Pressure' 
@@ -86,7 +86,7 @@ export default function MeasureTab(props) {
           name='Speed' 
           component={Convert} 
           options={{title:i18n.t('speed'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
-          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, allowNegativeNumbers: true }}
         />
         <Stack.Screen 
           name='Time' 
@@ -98,7 +98,7 @@ export default function MeasureTab(props) {
           name='Temperature' 
           component={Convert} 
           options={{title:i18n.t('temperature'), headerStyle:{ backgroundColor: props.route.params.backgroundColorHeader }}}
-          initialParams={{ backgroundColor: props.route.params.backgroundColor }}
+          initialParams={{ backgroundColor: props.route.params.backgroundColor, allowNegativeNumbers: true }}
         />
       </Stack.Navigator>
     

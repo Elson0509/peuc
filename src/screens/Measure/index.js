@@ -193,6 +193,7 @@ const styles = StyleSheet.create({
     titleModal: {
         fontSize: 20,
         marginBottom: 10,
+        fontWeight: 'bold'
     },
 })
 
