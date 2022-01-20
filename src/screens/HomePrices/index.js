@@ -33,13 +33,9 @@ const HomePrices = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 10
     },
     menuItem: {
-        borderWidth: 2,
-        marginVertical: 5,
-        marginHorizontal: 15,
-        borderRadius: 10,
+        borderWidth: 1,
         display: 'flex',
         flexDirection: 'row',
         padding: 10,
