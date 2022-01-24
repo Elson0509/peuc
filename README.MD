@@ -1,3 +1,5 @@
+<p><img src="assets/imgs/Group 5.png"></p>
+
 [![Price Examiner & Unit Convert](https://img.youtube.com/vi/fN0InTZlqGA/0.jpg)](https://www.youtube.com/watch?v=fN0InTZlqGA "")
 
 # Purpose
